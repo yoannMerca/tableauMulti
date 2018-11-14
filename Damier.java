@@ -10,11 +10,11 @@ public class Damier {
 	public static void main(String[] args) {
 		int positionI = 0;
 		int positionJ = 0;
+		boolean fin = false;	
 		int[][] tab = Table.createTableDamier();
-
-		// Table.deplacement(tab);
-		boolean fin = false;
 		Scanner sc = new Scanner(System.in);
+		
+		
 		for (int i = 0; i < tab.length; i++) {
 			for (int j = 0; j < tab[0].length; j++) {
 				if (tab[i][j] == 1) {
@@ -60,6 +60,7 @@ public class Damier {
 				positionJ = (positionJ + 9) % 10;
 				positionI = (positionI + 11) % 10;		
 			}
+			//affiche le tableau a deux dimension
 			Table.displayTableMulti(tab);
 		}
 		sc.close();
